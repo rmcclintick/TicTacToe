@@ -1,6 +1,8 @@
 # TicTacToe
 This is a playable Tic Tac Toe game made as a javascript webapp based on the assignment here: https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe
 
+The application is reachable at https://rmcclintick.github.io/TicTacToe/
+
 # What I learned
 * use of factory functions to create javascript objects
 * improved use of javascript arrays
