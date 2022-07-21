@@ -1,6 +1,8 @@
 const gameArea = document.querySelector(".game-board");
 const infoText = document.querySelector(".info-text");
 
+let currentPlayer = {};
+
 const GameBoard = () => {
     //create game board
     const grid = [];
@@ -16,17 +18,42 @@ const GameBoard = () => {
 
     const gameEnded = false;
 
-    return {grid, gameEnded};
+    const playerX = Player("X");
+    const playerO = Player("O");
+    const togglePlayer = () => {
+        if (currentPlayer === playerX) {
+            currentPlayer = playerO;
+        }
+        else {
+            currentPlayer = playerX;
+        }
+        console.log(currentPlayer.name);
+        infoText.innerHTML = currentPlayer.name + "'s Turn";
+    };
+    togglePlayer();
+
+    
+
+    return {grid, gameEnded, togglePlayer};
 }
 
 const Tile = () => {
-    const isFilled = false;
+    let isFilled = false;
     const contents = "";
     const getContents = () => contents;
     const getElement = () => {
         let element = document.createElement('div');
         element.classList.add('grid-space');
         element.classList.add('playable');
+        element.addEventListener("click", function(){
+            if(!isFilled)
+            {
+                element.innerHTML = currentPlayer.name;
+                isFilled = true;
+                element.classList.remove('playable');
+                gameBoard.togglePlayer();
+            }
+        });
         return element;
     };
 
@@ -37,8 +64,8 @@ const Player = (name) => {
     return {name};
 };
 
-const gameBoard = GameBoard();
-const playerX = Player("X");
-const playerY = Player("Y");
 
-infoText.innerHTML = playerX.name + "'s Turn";
+const gameBoard = GameBoard();
+
+
+
