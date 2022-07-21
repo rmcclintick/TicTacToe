@@ -56,3 +56,13 @@
     gap: 8px;
     margin: auto;
 }
+
+.grid-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-content {
+    font-size: 64px;
+}

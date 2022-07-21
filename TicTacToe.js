@@ -45,15 +45,19 @@ const Tile = () => {
         let element = document.createElement('div');
         element.classList.add('grid-space');
         element.classList.add('playable');
+        let contents = document.createElement('div');
+        contents.classList.add('grid-content');
+        element.appendChild(contents);
         element.addEventListener("click", function(){
             if(!isFilled)
             {
-                element.innerHTML = currentPlayer.name;
+                element.firstChild.innerHTML = currentPlayer.name;
                 isFilled = true;
                 element.classList.remove('playable');
                 gameBoard.togglePlayer();
             }
         });
+
         return element;
     };
 
