@@ -1,3 +1,7 @@
+:root {
+    --header-height: 15vh;
+}
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -13,7 +17,7 @@
 .header {
     background-color: #22223b;
     color: #f2e9e4;
-    height: 15vh;
+    height: var(--header-height);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -23,4 +27,9 @@
 .title {
     font-size: 32px;
     vertical-align: middle;
+}
+
+.game-area {
+    background-color: #9a8c98;
+    height: calc(100vh - var(--header-height));
 }
