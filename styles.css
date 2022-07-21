@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid-space {
+    width: 40px;
+    height: 40px;
+    background-color: #f2e9e4;
+}
+
+.header {
+    background-color: #22223b;
+    color: #f2e9e4;
+    height: 15vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 32px;
+    vertical-align: middle;
+}
