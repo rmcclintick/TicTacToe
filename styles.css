@@ -9,8 +9,6 @@
 }
 
 .grid-space {
-    width: 40px;
-    height: 40px;
     background-color: #f2e9e4;
 }
 
@@ -32,4 +30,13 @@
 .game-area {
     background-color: #9a8c98;
     height: calc(100vh - var(--header-height));
+    display: flex;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: 15vh 15vh 15vh;
+    grid-template-rows: 15vh 15vh 15vh;
+    gap: 8px;
+    margin: auto;
 }

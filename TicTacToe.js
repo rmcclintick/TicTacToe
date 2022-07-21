@@ -7,7 +7,6 @@ const GameBoard = () => {
         for (let j = 0; j < 3; j++) {
             let tile = Tile();
             gameArea.appendChild(tile.getElement());
-            console.log("create");
             row.push(Tile())
         }
         grid.push(row);
@@ -30,4 +29,3 @@ const Tile = () => {
 }
 
 const gameBoard = GameBoard();
-console.log(gameBoard);
